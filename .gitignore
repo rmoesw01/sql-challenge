@@ -1,3 +1,6 @@
+# Configuration file containing user names and passwords
+config.py
+
 # Data files that graders already have
 *.csv
 
