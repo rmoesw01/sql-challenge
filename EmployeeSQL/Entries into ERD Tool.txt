@@ -1,0 +1,36 @@
+Entries into ERD tool: https://app.quickdatabasediagrams.com/#/d/q9BKqn
+
+Titles
+-
+title_id varchar(5) PK
+title varchar(30)
+
+Employees
+-
+emp_no integer PK
+emp_title_id varchar(5) FK >- Titles.title_id
+birth_date date
+first_name varchar(30)
+last_name varchar(30)
+sex varchar(1)
+hire_date date
+
+Departments
+-
+dept_no varchar(4) PK
+dept_name varchar(30)
+
+Dept_emp
+-
+emp_no integer PK FK >- Employees.emp_no
+dept_no varchar(4) PK FK >- Departments.dept_no
+
+Dept_manager
+-
+emp_no integer PK FK - Employees.emp_no
+dept_no varchar(4) PK FK >- Departments.dept_no
+
+Salaries
+-
+emp_no integer PK FK - Employees.emp_no
+salary integer
